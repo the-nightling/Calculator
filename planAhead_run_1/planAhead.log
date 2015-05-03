@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Thu Apr 23 07:54:29 2015
+# Process ID: 4899
+# Log file: /home/bluelabuser/Desktop/Calculator/planAhead_run_1/planAhead.log
+# Journal file: /home/bluelabuser/Desktop/Calculator/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -447 day(s)
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /home/bluelabuser/Desktop/Calculator/pa.fromNetlist.tcl
+# create_project -name Calculator -dir "/home/bluelabuser/Desktop/Calculator/planAhead_run_1" -part xc7a100tcsg324-3
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'current_run' was cancelled
+INFO: [Common 17-344] 'source' was cancelled
+exit
+ERROR: [#UNDEF] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+ (See /home/bluelabuser/Desktop/Calculator/planAhead_pid4899.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Thu Apr 23 07:54:56 2015...
+INFO: [Common 17-83] Releasing license: PlanAhead

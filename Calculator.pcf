@@ -1,0 +1,318 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun May 03 07:42:16 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "SS_Segments<7>" LOCATE = SITE "M4" LEVEL 1;
+COMP "SS_Segments<6>" LOCATE = SITE "L6" LEVEL 1;
+COMP "SS_Segments<5>" LOCATE = SITE "M2" LEVEL 1;
+COMP "SS_Segments<0>" LOCATE = SITE "L3" LEVEL 1;
+COMP "SS_Segments<4>" LOCATE = SITE "K3" LEVEL 1;
+COMP "SS_Segments<3>" LOCATE = SITE "L4" LEVEL 1;
+COMP "SS_Segments<2>" LOCATE = SITE "L5" LEVEL 1;
+COMP "SS_Segments<1>" LOCATE = SITE "N1" LEVEL 1;
+COMP "SS_Drivers<2>" LOCATE = SITE "M3" LEVEL 1;
+COMP "SS_Drivers<1>" LOCATE = SITE "M6" LEVEL 1;
+COMP "SS_Drivers<3>" LOCATE = SITE "N5" LEVEL 1;
+COMP "SS_Drivers<0>" LOCATE = SITE "N6" LEVEL 1;
+COMP "Reset_Button" LOCATE = SITE "C12" LEVEL 1;
+COMP "CLK_100M" LOCATE = SITE "E3" LEVEL 1;
+COMP "Green<3>" LOCATE = SITE "A6" LEVEL 1;
+COMP "Green<1>" LOCATE = SITE "A5" LEVEL 1;
+COMP "Red<0>" LOCATE = SITE "A3" LEVEL 1;
+COMP "Green<2>" LOCATE = SITE "B6" LEVEL 1;
+COMP "Red<1>" LOCATE = SITE "B4" LEVEL 1;
+COMP "Red<2>" LOCATE = SITE "C5" LEVEL 1;
+COMP "Green<0>" LOCATE = SITE "C6" LEVEL 1;
+COMP "Red<3>" LOCATE = SITE "A4" LEVEL 1;
+COMP "Key_Data" LOCATE = SITE "B2" LEVEL 1;
+COMP "Key_Clk" LOCATE = SITE "F4" LEVEL 1;
+COMP "V_Sync" LOCATE = SITE "B12" LEVEL 1;
+COMP "H_Sync" LOCATE = SITE "B11" LEVEL 1;
+COMP "Blue<1>" LOCATE = SITE "C7" LEVEL 1;
+COMP "Blue<2>" LOCATE = SITE "D7" LEVEL 1;
+COMP "Blue<3>" LOCATE = SITE "D8" LEVEL 1;
+COMP "Blue<0>" LOCATE = SITE "B7" LEVEL 1;
+PIN
+        VGA_Text1/Font/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>
+        = BEL
+        "VGA_Text1/Font/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKU;
+PIN
+        VGA_Text1/Font/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>
+        = BEL
+        "VGA_Text1/Font/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKL;
+PIN
+        VGA_Text1/Font/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<65>
+        = BEL
+        "VGA_Text1/Font/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKU;
+PIN
+        VGA_Text1/Font/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<64>
+        = BEL
+        "VGA_Text1/Font/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKL;
+PIN
+        VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<63>
+        = BEL
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKU;
+PIN
+        VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<62>
+        = BEL
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKL;
+PIN
+        VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<65>
+        = BEL
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKU;
+PIN
+        VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<64>
+        = BEL
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKL;
+PIN
+        VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<63>
+        = BEL
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKU;
+PIN
+        VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<62>
+        = BEL
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKL;
+PIN
+        VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<65>
+        = BEL
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKU;
+PIN
+        VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<64>
+        = BEL
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKL;
+PIN
+        VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<63>
+        = BEL
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKU;
+PIN
+        VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<62>
+        = BEL
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKL;
+PIN
+        VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<65>
+        = BEL
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKU;
+PIN
+        VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<64>
+        = BEL
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKL;
+PIN
+        VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<63>
+        = BEL
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKU;
+PIN
+        VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<62>
+        = BEL
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKL;
+PIN
+        VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<65>
+        = BEL
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKU;
+PIN
+        VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<64>
+        = BEL
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKL;
+TIMEGRP VGA_PLL1_clkout0 = BEL "Second_Char_0" BEL "Second_Char_1" BEL
+        "Second_Char_2" BEL "Second_Char_3" BEL "prev_key_pressed" BEL
+        "First_Char_0" BEL "First_Char_1" BEL "First_Char_2" BEL
+        "First_Char_3" BEL "Third_Char" BEL "line_0" BEL "line_1" BEL "line_2"
+        BEL "line_3" BEL "line_4" BEL "top_0" BEL "top_1" BEL "top_2" BEL
+        "glyph_0" BEL "glyph_1" BEL "glyph_2" BEL "glyph_3" BEL "glyph_4" BEL
+        "glyph_5" BEL "glyph_6" BEL "glyph_7" BEL "stack_FF_0" BEL
+        "stack_FF_1" BEL "stack_FF_2" BEL "stack_FF_3" BEL "stack_FF_4" BEL
+        "stack_FF_5" BEL "stack_FF_6" BEL "stack_FF_7" BEL "stack_FF_32" BEL
+        "stack_FF_33" BEL "stack_FF_34" BEL "stack_FF_35" BEL "stack_FF_36"
+        BEL "stack_FF_37" BEL "stack_FF_38" BEL "stack_FF_39" BEL
+        "stack_FF_64" BEL "stack_FF_65" BEL "stack_FF_66" BEL "stack_FF_67"
+        BEL "stack_FF_68" BEL "stack_FF_69" BEL "stack_FF_70" BEL
+        "stack_FF_71" BEL "stack_FF_96" BEL "stack_FF_97" BEL "stack_FF_98"
+        BEL "stack_FF_99" BEL "stack_FF_100" BEL "stack_FF_101" BEL
+        "stack_FF_102" BEL "stack_FF_103" BEL "stack_FF_128" BEL
+        "stack_FF_129" BEL "stack_FF_130" BEL "stack_FF_131" BEL
+        "stack_FF_132" BEL "stack_FF_133" BEL "stack_FF_134" BEL
+        "stack_FF_135" BEL "stack_FF_160" BEL "stack_FF_161" BEL
+        "stack_FF_162" BEL "stack_FF_163" BEL "stack_FF_164" BEL
+        "stack_FF_165" BEL "stack_FF_166" BEL "stack_FF_167" BEL
+        "stack_FF_192" BEL "stack_FF_193" BEL "stack_FF_194" BEL
+        "stack_FF_195" BEL "stack_FF_196" BEL "stack_FF_197" BEL
+        "stack_FF_198" BEL "stack_FF_199" BEL "stack_FF_224" BEL
+        "stack_FF_225" BEL "stack_FF_226" BEL "stack_FF_227" BEL
+        "stack_FF_228" BEL "stack_FF_229" BEL "stack_FF_230" BEL
+        "stack_FF_231" BEL "Delay_Reset1/Count_0" BEL "Delay_Reset1/Count_1"
+        BEL "Delay_Reset1/Count_2" BEL "Delay_Reset1/Count_3" BEL
+        "Delay_Reset1/Count_4" BEL "Delay_Reset1/Count_5" BEL
+        "Delay_Reset1/Count_6" BEL "Delay_Reset1/Count_7" BEL
+        "Delay_Reset1/Count_8" BEL "Delay_Reset1/Count_9" BEL
+        "Delay_Reset1/Count_10" BEL "Delay_Reset1/Count_11" BEL
+        "Delay_Reset1/Count_12" BEL "Delay_Reset1/Count_13" BEL
+        "Delay_Reset1/Count_14" BEL "Delay_Reset1/Count_15" BEL
+        "Delay_Reset1/Count_16" BEL "Delay_Reset1/Count_17" BEL
+        "Delay_Reset1/Count_18" BEL "Delay_Reset1/Count_19" BEL
+        "Delay_Reset1/Count_20" BEL "Delay_Reset1/Count_21" BEL
+        "Delay_Reset1/Count_22" BEL "VGA_PLL1/clkout1_buf" BEL
+        "SS_Driver1/Count_16" BEL "SS_Driver1/Count_15" BEL
+        "SS_Driver1/Count_14" BEL "SS_Driver1/Count_13" BEL
+        "SS_Driver1/Count_12" BEL "SS_Driver1/Count_11" BEL
+        "SS_Driver1/Count_10" BEL "SS_Driver1/Count_9" BEL
+        "SS_Driver1/Count_8" BEL "SS_Driver1/Count_7" BEL "SS_Driver1/Count_6"
+        BEL "SS_Driver1/Count_5" BEL "SS_Driver1/Count_4" BEL
+        "SS_Driver1/Count_3" BEL "SS_Driver1/Count_2" BEL "SS_Driver1/Count_1"
+        BEL "SS_Driver1/Count_0" BEL "SS_Driver1/SegmentDrivers_3" BEL
+        "SS_Driver1/SegmentDrivers_2" BEL "SS_Driver1/SegmentDrivers_1" BEL
+        "SS_Driver1/SegmentDrivers_0" BEL "VGA_Text1/VCounter_9" BEL
+        "VGA_Text1/VCounter_8" BEL "VGA_Text1/VCounter_7" BEL
+        "VGA_Text1/VCounter_6" BEL "VGA_Text1/VCounter_5" BEL
+        "VGA_Text1/VCounter_4" BEL "VGA_Text1/VCounter_3" BEL
+        "VGA_Text1/VCounter_2" BEL "VGA_Text1/VCounter_1" BEL
+        "VGA_Text1/VCounter_0" BEL "VGA_Text1/HCounter_9" BEL
+        "VGA_Text1/HCounter_8" BEL "VGA_Text1/HCounter_7" BEL
+        "VGA_Text1/HCounter_6" BEL "VGA_Text1/HCounter_5" BEL
+        "VGA_Text1/HCounter_4" BEL "VGA_Text1/HCounter_3" BEL
+        "VGA_Text1/HCounter_2" BEL "VGA_Text1/HCounter_1" BEL
+        "VGA_Text1/HCounter_0" BEL "VGA_Text1/Blue_3" BEL "VGA_Text1/Blue_2"
+        BEL "VGA_Text1/Blue_1" BEL "VGA_Text1/Blue_0" BEL "VGA_Text1/Green_3"
+        BEL "VGA_Text1/Green_2" BEL "VGA_Text1/Green_1" BEL
+        "VGA_Text1/Green_0" BEL "VGA_Text1/Red_3" BEL "VGA_Text1/Red_2" BEL
+        "VGA_Text1/Red_1" BEL "VGA_Text1/Red_0" BEL
+        "VGA_Text1/tText_Foreground_11" BEL "VGA_Text1/tText_Foreground_10"
+        BEL "VGA_Text1/tText_Foreground_9" BEL "VGA_Text1/tText_Foreground_8"
+        BEL "VGA_Text1/tText_Foreground_7" BEL "VGA_Text1/tText_Foreground_6"
+        BEL "VGA_Text1/tText_Foreground_5" BEL "VGA_Text1/tText_Foreground_4"
+        BEL "VGA_Text1/tText_Foreground_3" BEL "VGA_Text1/tText_Foreground_2"
+        BEL "VGA_Text1/tText_Foreground_1" BEL "VGA_Text1/tText_Foreground_0"
+        BEL "VGA_Text1/tText_Background_11" BEL
+        "VGA_Text1/tText_Background_10" BEL "VGA_Text1/tText_Background_9" BEL
+        "VGA_Text1/tText_Background_8" BEL "VGA_Text1/tText_Background_7" BEL
+        "VGA_Text1/tText_Background_6" BEL "VGA_Text1/tText_Background_5" BEL
+        "VGA_Text1/tText_Background_4" BEL "VGA_Text1/tText_Background_3" BEL
+        "VGA_Text1/tText_Background_2" BEL "VGA_Text1/tText_Background_1" BEL
+        "VGA_Text1/tText_Background_0" BEL "VGA_Text1/tReset" BEL
+        "VGA_Text1/HSync" BEL "Delay_Reset1/Reset" BEL "VGA_Text1/VSync" BEL
+        "character_0" BEL "character_1" BEL "character_2" BEL "character_3"
+        BEL "character_4" BEL "character_5" BEL "character_6" PIN
+        "VGA_Text1/Font/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>"
+        PIN
+        "VGA_Text1/Font/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>"
+        PIN
+        "VGA_Text1/Font/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<65>"
+        PIN
+        "VGA_Text1/Font/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<64>"
+        PIN
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<63>"
+        PIN
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<62>"
+        PIN
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<65>"
+        PIN
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<64>"
+        PIN
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<63>"
+        PIN
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<62>"
+        PIN
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<65>"
+        PIN
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<64>"
+        PIN
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<63>"
+        PIN
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<62>"
+        PIN
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<65>"
+        PIN
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<64>"
+        PIN
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<63>"
+        PIN
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<62>"
+        PIN
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<65>"
+        PIN
+        "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_pins<64>";
+PIN VGA_PLL1/mmcm_adv_inst_pins<2> = BEL "VGA_PLL1/mmcm_adv_inst" PINNAME
+        CLKIN1;
+TIMEGRP CLK_100M = PIN "VGA_PLL1/mmcm_adv_inst_pins<2>";
+TS_CLK_100M = PERIOD TIMEGRP "CLK_100M" 10 ns HIGH 50%;
+TS_VGA_PLL1_clkout0 = PERIOD TIMEGRP "VGA_PLL1_clkout0" TS_CLK_100M /
+        0.251519757 HIGH 50%;
+PIN SS_Drivers_3_OBUF_pins<1> = BEL "SS_Drivers_3_OBUF" PINNAME OUT;
+PIN SS_Drivers_2_OBUF_pins<1> = BEL "SS_Drivers_2_OBUF" PINNAME OUT;
+PIN SS_Drivers_1_OBUF_pins<1> = BEL "SS_Drivers_1_OBUF" PINNAME OUT;
+PIN SS_Drivers_0_OBUF_pins<1> = BEL "SS_Drivers_0_OBUF" PINNAME OUT;
+PIN SS_Segments_7_OBUF_pins<1> = BEL "SS_Segments_7_OBUF" PINNAME OUT;
+PIN SS_Segments_6_OBUF_pins<1> = BEL "SS_Segments_6_OBUF" PINNAME OUT;
+PIN SS_Segments_5_OBUF_pins<1> = BEL "SS_Segments_5_OBUF" PINNAME OUT;
+PIN SS_Segments_4_OBUF_pins<1> = BEL "SS_Segments_4_OBUF" PINNAME OUT;
+PIN SS_Segments_3_OBUF_pins<1> = BEL "SS_Segments_3_OBUF" PINNAME OUT;
+PIN SS_Segments_2_OBUF_pins<1> = BEL "SS_Segments_2_OBUF" PINNAME OUT;
+PIN SS_Segments_1_OBUF_pins<1> = BEL "SS_Segments_1_OBUF" PINNAME OUT;
+PIN SS_Segments_0_OBUF_pins<1> = BEL "SS_Segments_0_OBUF" PINNAME OUT;
+PIN Red_3_OBUF_pins<1> = BEL "Red_3_OBUF" PINNAME OUT;
+PIN Red_2_OBUF_pins<1> = BEL "Red_2_OBUF" PINNAME OUT;
+PIN Red_1_OBUF_pins<1> = BEL "Red_1_OBUF" PINNAME OUT;
+PIN Red_0_OBUF_pins<1> = BEL "Red_0_OBUF" PINNAME OUT;
+PIN Green_3_OBUF_pins<1> = BEL "Green_3_OBUF" PINNAME OUT;
+PIN Green_2_OBUF_pins<1> = BEL "Green_2_OBUF" PINNAME OUT;
+PIN Green_1_OBUF_pins<1> = BEL "Green_1_OBUF" PINNAME OUT;
+PIN Green_0_OBUF_pins<1> = BEL "Green_0_OBUF" PINNAME OUT;
+PIN Blue_3_OBUF_pins<1> = BEL "Blue_3_OBUF" PINNAME OUT;
+PIN Blue_2_OBUF_pins<1> = BEL "Blue_2_OBUF" PINNAME OUT;
+PIN Blue_1_OBUF_pins<1> = BEL "Blue_1_OBUF" PINNAME OUT;
+PIN Blue_0_OBUF_pins<1> = BEL "Blue_0_OBUF" PINNAME OUT;
+PIN H_Sync_OBUF_pins<1> = BEL "H_Sync_OBUF" PINNAME OUT;
+PIN V_Sync_OBUF_pins<1> = BEL "V_Sync_OBUF" PINNAME OUT;
+PIN Key_Clk_pins<0> = BEL "Key_Clk" PINNAME PAD;
+PIN Reset_Button_pins<0> = BEL "Reset_Button" PINNAME PAD;
+PIN Key_Data_pins<0> = BEL "Key_Data" PINNAME PAD;
+PIN "SS_Drivers_3_OBUF_pins<1>" TIG;
+PIN "SS_Drivers_2_OBUF_pins<1>" TIG;
+PIN "SS_Drivers_1_OBUF_pins<1>" TIG;
+PIN "SS_Drivers_0_OBUF_pins<1>" TIG;
+PIN "SS_Segments_7_OBUF_pins<1>" TIG;
+PIN "SS_Segments_6_OBUF_pins<1>" TIG;
+PIN "SS_Segments_5_OBUF_pins<1>" TIG;
+PIN "SS_Segments_4_OBUF_pins<1>" TIG;
+PIN "SS_Segments_3_OBUF_pins<1>" TIG;
+PIN "SS_Segments_2_OBUF_pins<1>" TIG;
+PIN "SS_Segments_1_OBUF_pins<1>" TIG;
+PIN "SS_Segments_0_OBUF_pins<1>" TIG;
+PIN "Red_3_OBUF_pins<1>" TIG;
+PIN "Red_2_OBUF_pins<1>" TIG;
+PIN "Red_1_OBUF_pins<1>" TIG;
+PIN "Red_0_OBUF_pins<1>" TIG;
+PIN "Green_3_OBUF_pins<1>" TIG;
+PIN "Green_2_OBUF_pins<1>" TIG;
+PIN "Green_1_OBUF_pins<1>" TIG;
+PIN "Green_0_OBUF_pins<1>" TIG;
+PIN "Blue_3_OBUF_pins<1>" TIG;
+PIN "Blue_2_OBUF_pins<1>" TIG;
+PIN "Blue_1_OBUF_pins<1>" TIG;
+PIN "Blue_0_OBUF_pins<1>" TIG;
+PIN "H_Sync_OBUF_pins<1>" TIG;
+PIN "V_Sync_OBUF_pins<1>" TIG;
+PIN "Key_Clk_pins<0>" TIG;
+PIN "Reset_Button_pins<0>" TIG;
+PIN "Key_Data_pins<0>" TIG;
+SCHEMATIC END;
+

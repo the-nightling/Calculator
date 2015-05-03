@@ -1,0 +1,2 @@
+verilog work ../../VGA_PLL.v
+verilog work ../example_design/VGA_PLL_exdes.v

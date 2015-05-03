@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/nightling/EEE4084F Prac 5/Calculator/Calculator.ncd
+OUTFILE=/home/nightling/EEE4084F Prac 5/Calculator/Calculator.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=/home/nightling/EEE4084F Prac 5/Calculator
+LICENSE=WebPack
+USER_INFO=211037847_0_0_210

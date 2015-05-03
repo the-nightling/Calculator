@@ -1,0 +1,992 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: Calculator.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Calculator.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Calculator"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : Calculator
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_Text_Buffer.v" into library work
+Parsing module <VGA_Text_Buffer>.
+Analyzing Verilog file "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_Font.v" into library work
+Parsing module <VGA_Font>.
+Analyzing Verilog file "/home/nightling/EEE4084F Prac 5/Calculator/BCD_Decoder.v" into library work
+Parsing module <BCD_Decoder>.
+Analyzing Verilog file "/home/nightling/EEE4084F Prac 5/Calculator/VGA_Text.v" into library work
+Parsing module <VGA_Text>.
+Analyzing Verilog file "/home/nightling/EEE4084F Prac 5/Calculator/SS_Driver.v" into library work
+Parsing module <SS_Driver>.
+Analyzing Verilog file "/home/nightling/EEE4084F Prac 5/Calculator/Process_Keyboard.v" into library work
+Parsing module <Process_Keyboard>.
+Analyzing Verilog file "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" into library work
+Parsing module <VGA_PLL>.
+Analyzing Verilog file "/home/nightling/EEE4084F Prac 5/Calculator/Delay_Reset.v" into library work
+Parsing module <Delay_Reset>.
+Analyzing Verilog file "/home/nightling/EEE4084F Prac 5/Calculator/Calculator.v" into library work
+Parsing module <Calculator>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Calculator>.
+
+Elaborating module <Delay_Reset>.
+
+Elaborating module <Process_Keyboard>.
+
+Elaborating module <SS_Driver>.
+
+Elaborating module <BCD_Decoder>.
+
+Elaborating module <VGA_PLL>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <MMCME2_ADV(BANDWIDTH="OPTIMIZED",CLKOUT4_CASCADE="FALSE",COMPENSATION="ZHOLD",STARTUP_WAIT="FALSE",DIVCLK_DIVIDE=4,CLKFBOUT_MULT_F=41.375,CLKFBOUT_PHASE=0.0,CLKFBOUT_USE_FINE_PS="FALSE",CLKOUT0_DIVIDE_F=41.125,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT0_USE_FINE_PS="FALSE",CLKIN1_PERIOD=10.0,REF_JITTER1=0.01)>.
+WARNING:HDLCompiler:1127 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" Line 126: Assignment to clkfboutb_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" Line 128: Assignment to clkout0b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" Line 129: Assignment to clkout1_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" Line 130: Assignment to clkout1b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" Line 131: Assignment to clkout2_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" Line 132: Assignment to clkout2b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" Line 133: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" Line 134: Assignment to clkout3b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" Line 135: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" Line 136: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" Line 137: Assignment to clkout6_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" Line 149: Assignment to do_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" Line 150: Assignment to drdy_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" Line 156: Assignment to psdone_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" Line 159: Assignment to clkinstopped_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v" Line 160: Assignment to clkfbstopped_unused ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <VGA_Text>.
+
+Elaborating module <VGA_Text_Buffer>.
+WARNING:HDLCompiler:1499 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_Text_Buffer.v" Line 39: Empty module <VGA_Text_Buffer> remains a black box.
+
+Elaborating module <VGA_Font>.
+WARNING:HDLCompiler:1499 - "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_Font.v" Line 39: Empty module <VGA_Font> remains a black box.
+WARNING:HDLCompiler:413 - "/home/nightling/EEE4084F Prac 5/Calculator/Calculator.v" Line 74: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "/home/nightling/EEE4084F Prac 5/Calculator/Calculator.v" Line 78: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "/home/nightling/EEE4084F Prac 5/Calculator/Calculator.v" Line 82: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "/home/nightling/EEE4084F Prac 5/Calculator/Calculator.v" Line 86: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "/home/nightling/EEE4084F Prac 5/Calculator/Calculator.v" Line 90: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "/home/nightling/EEE4084F Prac 5/Calculator/Calculator.v" Line 94: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "/home/nightling/EEE4084F Prac 5/Calculator/Calculator.v" Line 98: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "/home/nightling/EEE4084F Prac 5/Calculator/Calculator.v" Line 102: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "/home/nightling/EEE4084F Prac 5/Calculator/Calculator.v" Line 106: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "/home/nightling/EEE4084F Prac 5/Calculator/Calculator.v" Line 110: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "/home/nightling/EEE4084F Prac 5/Calculator/Calculator.v" Line 112: Result of 6-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "/home/nightling/EEE4084F Prac 5/Calculator/Calculator.v" Line 125: Result of 32-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "/home/nightling/EEE4084F Prac 5/Calculator/Calculator.v" Line 136: Result of 6-bit expression is truncated to fit in 5-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Calculator>.
+    Related source file is "/home/nightling/EEE4084F Prac 5/Calculator/Calculator.v".
+    Register <Fourth_Char> equivalent to <prev_key_pressed> has been removed
+    Found 4-bit register for signal <Second_Char>.
+    Found 8-bit register for signal <glyph>.
+    Found 7-bit register for signal <character>.
+    Found 5-bit register for signal <line>.
+    Found 3-bit register for signal <top>.
+    Found 1-bit register for signal <prev_key_pressed>.
+    Found 4-bit register for signal <First_Char>.
+    Found 1-bit register for signal <Third_Char>.
+    Found 3-bit subtractor for signal <top[2]_GND_1_o_sub_51_OUT> created at line 115.
+    Found 7-bit adder for signal <character[6]_GND_1_o_add_41_OUT> created at line 110.
+    Found 32-bit adder for signal <top[2]_top[2]_add_47_OUT> created at line 114.
+    Found 8-bit adder for signal <GND_1_o_top[2]_add_58_OUT> created at line 123.
+    Found 5-bit adder for signal <line[4]_GND_1_o_add_64_OUT> created at line 128.
+    Found 3-bit adder for signal <top[2]_GND_1_o_add_65_OUT> created at line 130.
+    Found 5-bit adder for signal <line[4]_GND_1_o_add_119_OUT> created at line 136.
+    Found 7-bit subtractor for signal <GND_1_o_GND_1_o_sub_62_OUT<6:0>> created at line 125.
+    Found 8x32-bit dual-port RAM <Mram_stack> for signal <stack>.
+    Found 3-bit comparator equal for signal <_n0518> created at line 33
+    WARNING:Xst:2404 -  FFs/Latches <Third_Char<3:1>> (without init value) have a constant value of 0 in block <Calculator>.
+    WARNING:Xst:2404 -  FFs/Latches <Fourth_Char<3:1>> (without init value) have a constant value of 0 in block <Calculator>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred 106 Multiplexer(s).
+Unit <Calculator> synthesized.
+
+Synthesizing Unit <Delay_Reset>.
+    Related source file is "/home/nightling/EEE4084F Prac 5/Calculator/Delay_Reset.v".
+    Found 1-bit register for signal <Reset>.
+    Found 23-bit register for signal <Count>.
+    Found 23-bit adder for signal <Count[22]_GND_2_o_add_2_OUT> created at line 17.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+Unit <Delay_Reset> synthesized.
+
+Synthesizing Unit <Process_Keyboard>.
+    Related source file is "/home/nightling/EEE4084F Prac 5/Calculator/Process_Keyboard.v".
+    Found 1-bit register for signal <data<8>>.
+    Found 1-bit register for signal <data<7>>.
+    Found 1-bit register for signal <data<6>>.
+    Found 1-bit register for signal <data<5>>.
+    Found 1-bit register for signal <data<4>>.
+    Found 1-bit register for signal <data<3>>.
+    Found 1-bit register for signal <data<2>>.
+    Found 1-bit register for signal <data<1>>.
+    Found 4-bit register for signal <count>.
+    Found 8-bit register for signal <Data_out>.
+    Found 1-bit register for signal <ext>.
+    Found 1-bit register for signal <key_pressed>.
+    Found 8-bit register for signal <prev_data>.
+    Found 4-bit adder for signal <count[3]_GND_3_o_add_2_OUT> created at line 14.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  30 D-type flip-flop(s).
+	inferred   8 Multiplexer(s).
+Unit <Process_Keyboard> synthesized.
+
+Synthesizing Unit <SS_Driver>.
+    Related source file is "/home/nightling/EEE4084F Prac 5/Calculator/SS_Driver.v".
+    Found 4-bit register for signal <SegmentDrivers>.
+    Found 17-bit register for signal <Count>.
+    Found 17-bit adder for signal <Count[16]_GND_4_o_add_1_OUT> created at line 22.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <SS_Driver> synthesized.
+
+Synthesizing Unit <BCD_Decoder>.
+    Related source file is "/home/nightling/EEE4084F Prac 5/Calculator/BCD_Decoder.v".
+    Found 16x7-bit Read Only RAM for signal <SevenSegment>
+    Summary:
+	inferred   1 RAM(s).
+Unit <BCD_Decoder> synthesized.
+
+Synthesizing Unit <VGA_PLL>.
+    Related source file is "/home/nightling/EEE4084F Prac 5/Calculator/ipcore_dir/VGA_PLL.v".
+    Summary:
+	no macro.
+Unit <VGA_PLL> synthesized.
+
+Synthesizing Unit <VGA_Text>.
+    Related source file is "/home/nightling/EEE4084F Prac 5/Calculator/VGA_Text.v".
+    Found 12-bit register for signal <tText_Background>.
+    Found 1-bit register for signal <tReset>.
+    Found 10-bit register for signal <HCounter>.
+    Found 10-bit register for signal <VCounter>.
+    Found 1-bit register for signal <HSync>.
+    Found 1-bit register for signal <VSync>.
+    Found 4-bit register for signal <Red>.
+    Found 4-bit register for signal <Green>.
+    Found 4-bit register for signal <Blue>.
+    Found 12-bit register for signal <tText_Foreground>.
+    Found 10-bit adder for signal <VCounter[9]_GND_10_o_add_11_OUT> created at line 127.
+    Found 10-bit adder for signal <HCounter[9]_GND_10_o_add_13_OUT> created at line 130.
+    Found 1-bit 8-to-1 multiplexer for signal <Glyph_Pixel> created at line 87.
+    Found 10-bit comparator greater for signal <GND_10_o_HCounter[9]_LessThan_21_o> created at line 141
+    Found 10-bit comparator greater for signal <HCounter[9]_PWR_11_o_LessThan_22_o> created at line 141
+    Found 10-bit comparator greater for signal <VCounter[9]_GND_10_o_LessThan_23_o> created at line 141
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  59 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred   9 Multiplexer(s).
+Unit <VGA_Text> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 16x7-bit single-port Read Only RAM                    : 4
+ 8x32-bit dual-port RAM                                : 1
+# Adders/Subtractors                                   : 13
+ 10-bit adder                                          : 2
+ 17-bit adder                                          : 1
+ 23-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 3-bit subtractor                                      : 1
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 2
+ 7-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 35
+ 1-bit register                                        : 16
+ 10-bit register                                       : 2
+ 12-bit register                                       : 2
+ 17-bit register                                       : 1
+ 23-bit register                                       : 1
+ 3-bit register                                        : 1
+ 4-bit register                                        : 7
+ 5-bit register                                        : 1
+ 7-bit register                                        : 1
+ 8-bit register                                        : 3
+# Comparators                                          : 4
+ 10-bit comparator greater                             : 3
+ 3-bit comparator equal                                : 1
+# Multiplexers                                         : 125
+ 1-bit 2-to-1 multiplexer                              : 33
+ 1-bit 8-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 2
+ 3-bit 2-to-1 multiplexer                              : 8
+ 32-bit 2-to-1 multiplexer                             : 49
+ 4-bit 2-to-1 multiplexer                              : 7
+ 5-bit 2-to-1 multiplexer                              : 6
+ 7-bit 2-to-1 multiplexer                              : 5
+ 8-bit 2-to-1 multiplexer                              : 14
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/VGA_Text_Buffer.ngc>.
+Reading core <ipcore_dir/VGA_Font.ngc>.
+Loading core <VGA_Text_Buffer> for timing and area information for instance <Text_Buffer>.
+Loading core <VGA_Font> for timing and area information for instance <Font>.
+INFO:Xst:2261 - The FF/Latch <Data_out_2> in Unit <Process_Keyboard1> is equivalent to the following FF/Latch, which will be removed : <prev_data_2> 
+INFO:Xst:2261 - The FF/Latch <Data_out_5> in Unit <Process_Keyboard1> is equivalent to the following FF/Latch, which will be removed : <prev_data_5> 
+INFO:Xst:2261 - The FF/Latch <Data_out_3> in Unit <Process_Keyboard1> is equivalent to the following FF/Latch, which will be removed : <prev_data_3> 
+INFO:Xst:2261 - The FF/Latch <Data_out_6> in Unit <Process_Keyboard1> is equivalent to the following FF/Latch, which will be removed : <prev_data_6> 
+INFO:Xst:2261 - The FF/Latch <Data_out_0> in Unit <Process_Keyboard1> is equivalent to the following FF/Latch, which will be removed : <prev_data_0> 
+INFO:Xst:2261 - The FF/Latch <Data_out_4> in Unit <Process_Keyboard1> is equivalent to the following FF/Latch, which will be removed : <prev_data_4> 
+INFO:Xst:2261 - The FF/Latch <Data_out_7> in Unit <Process_Keyboard1> is equivalent to the following FF/Latch, which will be removed : <prev_data_7> 
+INFO:Xst:2261 - The FF/Latch <Data_out_1> in Unit <Process_Keyboard1> is equivalent to the following FF/Latch, which will be removed : <prev_data_1> 
+
+Synthesizing (advanced) Unit <BCD_Decoder>.
+INFO:Xst:3231 - The small RAM <Mram_SevenSegment> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <BCD>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <SevenSegment>  |          |
+    -----------------------------------------------------------------------
+Unit <BCD_Decoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Calculator>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_stack> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 32-bit                     |          |
+    |     clkA           | connected to signal <CLK_25M>       | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <top>           |          |
+    |     diA            | connected to signal <_n1520>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 32-bit                     |          |
+    |     clkB           | connected to signal <CLK_25M>       | rise     |
+    |     weB            | connected to signal <Output_Data[7]_GND_1_o_MUX_167_o_0> | high     |
+    |     addrB          | connected to signal <top[2]_GND_1_o_sub_51_OUT> |          |
+    |     diB            | connected to signal <top[2]_top[2]_add_47_OUT> |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Calculator> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Delay_Reset>.
+The following registers are absorbed into counter <Count>: 1 register on signal <Count>.
+Unit <Delay_Reset> synthesized (advanced).
+
+Synthesizing (advanced) Unit <Process_Keyboard>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <Process_Keyboard> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SS_Driver>.
+The following registers are absorbed into counter <Count>: 1 register on signal <Count>.
+Unit <SS_Driver> synthesized (advanced).
+
+Synthesizing (advanced) Unit <VGA_Text>.
+The following registers are absorbed into counter <HCounter>: 1 register on signal <HCounter>.
+The following registers are absorbed into counter <VCounter>: 1 register on signal <VCounter>.
+Unit <VGA_Text> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 5
+ 16x7-bit single-port distributed Read Only RAM        : 4
+ 8x32-bit dual-port distributed RAM                    : 1
+# Adders/Subtractors                                   : 9
+ 3-bit adder                                           : 1
+ 3-bit subtractor                                      : 1
+ 32-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 5-bit adder                                           : 2
+ 7-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 5
+ 10-bit up counter                                     : 2
+ 17-bit up counter                                     : 1
+ 23-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 103
+ Flip-Flops                                            : 103
+# Comparators                                          : 4
+ 10-bit comparator greater                             : 3
+ 3-bit comparator equal                                : 1
+# Multiplexers                                         : 123
+ 1-bit 2-to-1 multiplexer                              : 33
+ 1-bit 8-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 8
+ 32-bit 2-to-1 multiplexer                             : 49
+ 4-bit 2-to-1 multiplexer                              : 7
+ 5-bit 2-to-1 multiplexer                              : 6
+ 7-bit 2-to-1 multiplexer                              : 5
+ 8-bit 2-to-1 multiplexer                              : 14
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <Data_out_2> in Unit <Process_Keyboard> is equivalent to the following FF/Latch, which will be removed : <prev_data_2> 
+INFO:Xst:2261 - The FF/Latch <Data_out_5> in Unit <Process_Keyboard> is equivalent to the following FF/Latch, which will be removed : <prev_data_5> 
+INFO:Xst:2261 - The FF/Latch <Data_out_3> in Unit <Process_Keyboard> is equivalent to the following FF/Latch, which will be removed : <prev_data_3> 
+INFO:Xst:2261 - The FF/Latch <Data_out_6> in Unit <Process_Keyboard> is equivalent to the following FF/Latch, which will be removed : <prev_data_6> 
+INFO:Xst:2261 - The FF/Latch <Data_out_0> in Unit <Process_Keyboard> is equivalent to the following FF/Latch, which will be removed : <prev_data_0> 
+INFO:Xst:2261 - The FF/Latch <Data_out_4> in Unit <Process_Keyboard> is equivalent to the following FF/Latch, which will be removed : <prev_data_4> 
+INFO:Xst:2261 - The FF/Latch <Data_out_7> in Unit <Process_Keyboard> is equivalent to the following FF/Latch, which will be removed : <prev_data_7> 
+INFO:Xst:2261 - The FF/Latch <Data_out_1> in Unit <Process_Keyboard> is equivalent to the following FF/Latch, which will be removed : <prev_data_1> 
+WARNING:Xst:2677 - Node <stack_FF_8> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_9> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_10> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_11> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_12> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_13> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_14> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_15> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_16> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_17> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_18> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_19> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_20> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_21> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_22> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_23> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_24> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_25> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_26> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_27> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_28> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_29> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_30> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_31> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_40> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_41> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_42> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_43> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_44> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_45> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_46> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_47> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_48> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_49> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_50> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_51> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_52> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_53> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_54> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_55> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_56> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_57> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_58> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_59> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_60> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_61> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_62> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_63> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_72> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_73> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_74> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_75> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_76> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_77> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_78> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_79> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_80> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_81> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_82> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_83> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_84> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_85> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_86> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_87> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_88> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_89> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_90> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_91> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_92> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_93> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_94> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_95> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_104> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_105> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_106> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_107> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_108> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_109> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_110> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_111> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_112> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_113> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_114> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_115> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_116> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_117> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_118> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_119> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_120> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_121> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_122> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_123> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_124> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_125> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_126> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_127> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_136> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_137> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_138> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_139> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_140> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_141> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_142> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_143> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_144> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_145> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_146> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_147> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_148> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_149> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_150> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_151> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_152> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_153> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_154> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_155> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_156> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_157> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_158> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_159> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_168> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_169> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_170> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_171> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_172> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_173> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_174> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_175> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_176> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_177> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_178> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_179> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_180> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_181> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_182> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_183> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_184> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_185> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_186> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_187> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_188> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_189> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_190> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_191> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_200> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_201> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_202> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_203> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_204> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_205> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_206> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_207> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_208> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_209> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_210> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_211> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_212> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_213> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_214> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_215> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_216> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_217> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_218> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_219> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_220> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_221> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_222> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_223> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_232> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_233> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_234> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_235> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_236> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_237> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_238> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_239> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_240> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_241> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_242> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_243> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_244> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_245> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_246> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_247> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_248> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_249> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_250> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_251> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_252> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_253> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_254> of sequential type is unconnected in block <Calculator>.
+WARNING:Xst:2677 - Node <stack_FF_255> of sequential type is unconnected in block <Calculator>.
+
+Optimizing unit <Calculator> ...
+
+Optimizing unit <Process_Keyboard> ...
+
+Optimizing unit <SS_Driver> ...
+
+Optimizing unit <VGA_Text> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Calculator, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 223
+ Flip-Flops                                            : 223
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Calculator.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 600
+#      GND                         : 3
+#      INV                         : 7
+#      LUT1                        : 38
+#      LUT2                        : 10
+#      LUT3                        : 33
+#      LUT4                        : 78
+#      LUT5                        : 73
+#      LUT6                        : 212
+#      MUXCY                       : 63
+#      MUXF7                       : 12
+#      VCC                         : 3
+#      XORCY                       : 68
+# FlipFlops/Latches                : 223
+#      FD                          : 61
+#      FD_1                        : 8
+#      FDE                         : 84
+#      FDE_1                       : 10
+#      FDR                         : 26
+#      FDRE                        : 33
+#      FDS                         : 1
+# RAMS                             : 5
+#      RAMB36E1                    : 5
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 29
+#      IBUF                        : 2
+#      IBUFG                       : 1
+#      OBUF                        : 26
+# Others                           : 1
+#      MMCME2_ADV                  : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             223  out of  126800     0%  
+ Number of Slice LUTs:                  451  out of  63400     0%  
+    Number used as Logic:               451  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    479
+   Number with an unused Flip Flop:     256  out of    479    53%  
+   Number with an unused LUT:            28  out of    479     5%  
+   Number of fully used LUT-FF pairs:   195  out of    479    40%  
+   Number of unique control sets:        18
+
+IO Utilization: 
+ Number of IOs:                          30
+ Number of bonded IOBs:                  30  out of    210    14%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                5  out of    135     3%  
+    Number using Block RAM only:          5
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+VGA_PLL1/clkout0                   | BUFG                   | 206   |
+Key_Clk                            | BUFGP                  | 22    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                           | Buffer(FF name)                                                                                                                                             | Load  |
+---------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+VGA_Text1/Text_Buffer/N1(VGA_Text1/Text_Buffer/XST_GND:G)| NONE(VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram)| 8     |
+VGA_Text1/Font/N1(VGA_Text1/Font/XST_GND:G)              | NONE(VGA_Text1/Font/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)        | 2     |
+---------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.852ns (Maximum Frequency: 259.607MHz)
+   Minimum input arrival time before clock: 2.028ns
+   Maximum output required time after clock: 2.605ns
+   Maximum combinational path delay: 0.001ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'VGA_PLL1/clkout0'
+  Clock period: 3.852ns (frequency: 259.607MHz)
+  Total number of paths / destination ports: 18313 / 324
+-------------------------------------------------------------------------
+Delay:               3.852ns (Levels of Logic = 13)
+  Source:            top_2 (FF)
+  Destination:       glyph_7 (FF)
+  Source Clock:      VGA_PLL1/clkout0 rising
+  Destination Clock: VGA_PLL1/clkout0 rising
+
+  Data Path: top_2 to glyph_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             81   0.361   0.808  top_2 (top_2)
+     LUT6:I0->O            1   0.097   0.000  inst_LPM_MUX32_2_f7_G (N176)
+     MUXF7:I1->O           2   0.279   0.299  inst_LPM_MUX32_2_f7 (top[2]_read_port_45_OUT<0>)
+     LUT6:I5->O            1   0.097   0.000  Madd_top[2]_top[2]_add_47_OUT_lut<0> (Madd_top[2]_top[2]_add_47_OUT_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  Madd_top[2]_top[2]_add_47_OUT_cy<0> (Madd_top[2]_top[2]_add_47_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_top[2]_top[2]_add_47_OUT_cy<1> (Madd_top[2]_top[2]_add_47_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_top[2]_top[2]_add_47_OUT_cy<2> (Madd_top[2]_top[2]_add_47_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_top[2]_top[2]_add_47_OUT_cy<3> (Madd_top[2]_top[2]_add_47_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_top[2]_top[2]_add_47_OUT_cy<4> (Madd_top[2]_top[2]_add_47_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  Madd_top[2]_top[2]_add_47_OUT_cy<5> (Madd_top[2]_top[2]_add_47_OUT_cy<5>)
+     MUXCY:CI->O           0   0.023   0.000  Madd_top[2]_top[2]_add_47_OUT_cy<6> (Madd_top[2]_top[2]_add_47_OUT_cy<6>)
+     XORCY:CI->O          10   0.370   0.337  Madd_top[2]_top[2]_add_47_OUT_xor<7> (top[2]_top[2]_add_47_OUT<7>)
+     LUT4:I3->O            1   0.097   0.511  Mmux_GND_1_o_GND_1_o_mux_114_OUT82_SW1 (N60)
+     LUT6:I3->O            1   0.097   0.000  Mmux_GND_1_o_GND_1_o_mux_114_OUT83 (GND_1_o_GND_1_o_mux_114_OUT<7>)
+     FDE:D                     0.008          glyph_7
+    ----------------------------------------
+    Total                      3.852ns (1.897ns logic, 1.955ns route)
+                                       (49.2% logic, 50.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Key_Clk'
+  Clock period: 2.790ns (frequency: 358.410MHz)
+  Total number of paths / destination ports: 242 / 36
+-------------------------------------------------------------------------
+Delay:               2.790ns (Levels of Logic = 3)
+  Source:            Process_Keyboard1/count_3 (FF)
+  Destination:       Process_Keyboard1/ext (FF)
+  Source Clock:      Key_Clk falling
+  Destination Clock: Key_Clk falling
+
+  Data Path: Process_Keyboard1/count_3 to Process_Keyboard1/ext
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             11   0.361   0.730  Process_Keyboard1/count_3 (Process_Keyboard1/count_3)
+     LUT6:I1->O            4   0.097   0.707  Process_Keyboard1/Mmux_data[7]_Data_in_MUX_28_o11 (Process_Keyboard1/data[7]_Data_in_MUX_28_o)
+     LUT6:I0->O            1   0.097   0.693  Process_Keyboard1/data[8]_prev_data[7]_OR_11_o1 (Process_Keyboard1/data[8]_prev_data[7]_OR_11_o1)
+     LUT6:I0->O            1   0.097   0.000  Process_Keyboard1/data[8]_prev_data[7]_OR_11_o3 (Process_Keyboard1/data[8]_prev_data[7]_OR_11_o)
+     FDE_1:D                   0.008          Process_Keyboard1/ext
+    ----------------------------------------
+    Total                      2.790ns (0.660ns logic, 2.130ns route)
+                                       (23.7% logic, 76.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'VGA_PLL1/clkout0'
+  Total number of paths / destination ports: 25 / 25
+-------------------------------------------------------------------------
+Offset:              1.124ns (Levels of Logic = 2)
+  Source:            Reset_Button (PAD)
+  Destination:       Delay_Reset1/Count_0 (FF)
+  Destination Clock: VGA_PLL1/clkout0 rising
+
+  Data Path: Reset_Button to Delay_Reset1/Count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.001   0.284  Reset_Button_IBUF (Reset_Button_IBUF)
+     INV:I->O             23   0.113   0.377  Reset_Button_INV_2_o1_INV_0 (Reset_Button_INV_2_o)
+     FDRE:R                    0.349          Delay_Reset1/Count_0
+    ----------------------------------------
+    Total                      1.124ns (0.463ns logic, 0.661ns route)
+                                       (41.2% logic, 58.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Key_Clk'
+  Total number of paths / destination ports: 32 / 18
+-------------------------------------------------------------------------
+Offset:              2.028ns (Levels of Logic = 4)
+  Source:            Key_Data (PAD)
+  Destination:       Process_Keyboard1/ext (FF)
+  Destination Clock: Key_Clk falling
+
+  Data Path: Key_Data to Process_Keyboard1/ext
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   0.001   0.327  Key_Data_IBUF (Key_Data_IBUF)
+     LUT6:I5->O            4   0.097   0.707  Process_Keyboard1/Mmux_data[7]_Data_in_MUX_28_o11 (Process_Keyboard1/data[7]_Data_in_MUX_28_o)
+     LUT6:I0->O            1   0.097   0.693  Process_Keyboard1/data[8]_prev_data[7]_OR_11_o1 (Process_Keyboard1/data[8]_prev_data[7]_OR_11_o1)
+     LUT6:I0->O            1   0.097   0.000  Process_Keyboard1/data[8]_prev_data[7]_OR_11_o3 (Process_Keyboard1/data[8]_prev_data[7]_OR_11_o)
+     FDE_1:D                   0.008          Process_Keyboard1/ext
+    ----------------------------------------
+    Total                      2.028ns (0.300ns logic, 1.728ns route)
+                                       (14.8% logic, 85.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'VGA_PLL1/clkout0'
+  Total number of paths / destination ports: 166 / 25
+-------------------------------------------------------------------------
+Offset:              2.605ns (Levels of Logic = 4)
+  Source:            SS_Driver1/SegmentDrivers_1 (FF)
+  Destination:       SS_Segments<5> (PAD)
+  Source Clock:      VGA_PLL1/clkout0 rising
+
+  Data Path: SS_Driver1/SegmentDrivers_1 to SS_Segments<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              8   0.361   0.589  SS_Driver1/SegmentDrivers_1 (SS_Driver1/SegmentDrivers_1)
+     LUT4:I0->O            6   0.097   0.706  SS_Driver1/SegmentDrivers[3]_GND_4_o_equal_14_o<3>1 (SS_Driver1/SegmentDrivers[3]_GND_4_o_equal_14_o)
+     LUT5:I0->O            1   0.097   0.379  SS_Driver1/Mmux_SevenSegment41 (SS_Driver1/Mmux_SevenSegment4)
+     LUT4:I2->O            1   0.097   0.279  SS_Driver1/Mmux_SevenSegment44 (SS_Segments_3_OBUF)
+     OBUF:I->O                 0.000          SS_Segments_3_OBUF (SS_Segments<3>)
+    ----------------------------------------
+    Total                      2.605ns (0.652ns logic, 1.954ns route)
+                                       (25.0% logic, 75.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               0.001ns (Levels of Logic = 1)
+  Source:            CLK_100M (PAD)
+  Destination:       VGA_PLL1/mmcm_adv_inst:CLKIN1 (PAD)
+
+  Data Path: CLK_100M to VGA_PLL1/mmcm_adv_inst:CLKIN1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUFG:I->O            0   0.001   0.000  VGA_PLL1/clkin1_buf (VGA_PLL1/clkin1)
+    MMCME2_ADV:CLKIN1          0.000          VGA_PLL1/mmcm_adv_inst
+    ----------------------------------------
+    Total                      0.001ns (0.001ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Key_Clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Key_Clk        |         |         |    2.790|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock VGA_PLL1/clkout0
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+Key_Clk         |         |    6.499|         |         |
+VGA_PLL1/clkout0|    3.852|         |         |         |
+----------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 11.74 secs
+ 
+--> 
+
+
+Total memory usage is 510596 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  225 (   0 filtered)
+Number of infos    :   18 (   0 filtered)
+

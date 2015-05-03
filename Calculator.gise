@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="Calculator.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="Calculator.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="Calculator.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="Calculator.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Calculator.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="Calculator.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Calculator.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="Calculator.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="Calculator.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="Calculator.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="Calculator.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="Calculator.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="Calculator.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="Calculator.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Calculator.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="Calculator.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="Calculator.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="Calculator.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="Calculator.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="Calculator.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="Calculator.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="Calculator.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="Calculator.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="Calculator.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Calculator_envsettings.html"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="Calculator_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="Calculator_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="Calculator_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="Calculator_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="Calculator_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Calculator_map.xrpt"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="Calculator_map_fpga_editor.log"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Calculator_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="Calculator_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="Calculator_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Calculator_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="Calculator_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="Calculator_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="Calculator_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="Calculator_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ipcore_dir/VGA_Font.ngc" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="ipcore_dir/VGA_Font.v" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VEO" xil_pn:name="ipcore_dir/VGA_Font.veo" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/VGA_PLL.asy" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_UCF" xil_pn:name="ipcore_dir/VGA_PLL.ucf" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="ipcore_dir/VGA_PLL.v" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VEO" xil_pn:name="ipcore_dir/VGA_PLL.veo" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="ipcore_dir/VGA_Text_Buffer.ngc" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VERILOG" xil_pn:name="ipcore_dir/VGA_Text_Buffer.v" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VEO" xil_pn:name="ipcore_dir/VGA_Text_Buffer.veo" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="planAhead_run_1"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1429803438" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1429803438">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1429803438" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="1698896770061512127" xil_pn:start_ts="1429803438">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1429803438" xil_pn:in_ck="-8170260150891846935" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-1561941821295289657" xil_pn:start_ts="1429803438">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ipcore_dir/VGA_Font.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/VGA_Font.v"/>
+      <outfile xil_pn:name="ipcore_dir/VGA_PLL.v"/>
+      <outfile xil_pn:name="ipcore_dir/VGA_Text_Buffer.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/VGA_Text_Buffer.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1429803438" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1429803438">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1429803438" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="7715419667387354209" xil_pn:start_ts="1429803438">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1429803438" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1429803438">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1429803438" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="381276293781534673" xil_pn:start_ts="1429803438">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1430631694" xil_pn:in_ck="-5718905464690318139" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="-256410373216621852" xil_pn:start_ts="1430631680">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="Calculator.lso"/>
+      <outfile xil_pn:name="Calculator.ngc"/>
+      <outfile xil_pn:name="Calculator.ngr"/>
+      <outfile xil_pn:name="Calculator.prj"/>
+      <outfile xil_pn:name="Calculator.stx"/>
+      <outfile xil_pn:name="Calculator.syr"/>
+      <outfile xil_pn:name="Calculator.xst"/>
+      <outfile xil_pn:name="Calculator_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1430393635" xil_pn:in_ck="-264750746697261866" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8765696239209836940" xil_pn:start_ts="1430393635">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1430631702" xil_pn:in_ck="655088181705574271" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="5181500060597188088" xil_pn:start_ts="1430631694">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Calculator.bld"/>
+      <outfile xil_pn:name="Calculator.ngd"/>
+      <outfile xil_pn:name="Calculator_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1430631738" xil_pn:in_ck="-6580327111008614873" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="2100985583056581773" xil_pn:start_ts="1430631702">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="Calculator.pcf"/>
+      <outfile xil_pn:name="Calculator_map.map"/>
+      <outfile xil_pn:name="Calculator_map.mrp"/>
+      <outfile xil_pn:name="Calculator_map.ncd"/>
+      <outfile xil_pn:name="Calculator_map.ngm"/>
+      <outfile xil_pn:name="Calculator_map.xrpt"/>
+      <outfile xil_pn:name="Calculator_summary.xml"/>
+      <outfile xil_pn:name="Calculator_usage.xml"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1430631773" xil_pn:in_ck="-240373242724170368" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-2283627392121029586" xil_pn:start_ts="1430631738">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Calculator.ncd"/>
+      <outfile xil_pn:name="Calculator.pad"/>
+      <outfile xil_pn:name="Calculator.par"/>
+      <outfile xil_pn:name="Calculator.ptwx"/>
+      <outfile xil_pn:name="Calculator.unroutes"/>
+      <outfile xil_pn:name="Calculator.xpi"/>
+      <outfile xil_pn:name="Calculator_pad.csv"/>
+      <outfile xil_pn:name="Calculator_pad.txt"/>
+      <outfile xil_pn:name="Calculator_par.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1430631802" xil_pn:in_ck="-264750746697269491" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="306664139534459597" xil_pn:start_ts="1430631773">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Calculator.bgn"/>
+      <outfile xil_pn:name="Calculator.bit"/>
+      <outfile xil_pn:name="Calculator.drc"/>
+      <outfile xil_pn:name="Calculator.ut"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1430600444" xil_pn:in_ck="-264750746697282345" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="-6383737364629502382" xil_pn:start_ts="1430600443">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForced"/>
+      <status xil_pn:value="InputChanged"/>
+    </transform>
+    <transform xil_pn:end_ts="1430631773" xil_pn:in_ck="8417147504061116067" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1430631760">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="Calculator.twr"/>
+      <outfile xil_pn:name="Calculator.twx"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+    </transform>
+  </transforms>
+
+</generated_project>
