@@ -62,6 +62,10 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="75"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
+    <file xil_pn:name="STACK_APPEND.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="76"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
+    </file>
   </files>
 
   <properties>

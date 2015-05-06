@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun May 03 07:42:16 2015
+// Written by: Map P.20131013 on Wed May 06 14:44:23 2015
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -133,34 +133,84 @@ PIN
         = BEL
         "VGA_Text1/Text_Buffer/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_init.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram"
         PINNAME CLKBWRCLKL;
-TIMEGRP VGA_PLL1_clkout0 = BEL "Second_Char_0" BEL "Second_Char_1" BEL
-        "Second_Char_2" BEL "Second_Char_3" BEL "prev_key_pressed" BEL
-        "First_Char_0" BEL "First_Char_1" BEL "First_Char_2" BEL
-        "First_Char_3" BEL "Third_Char" BEL "line_0" BEL "line_1" BEL "line_2"
-        BEL "line_3" BEL "line_4" BEL "top_0" BEL "top_1" BEL "top_2" BEL
-        "glyph_0" BEL "glyph_1" BEL "glyph_2" BEL "glyph_3" BEL "glyph_4" BEL
-        "glyph_5" BEL "glyph_6" BEL "glyph_7" BEL "stack_FF_0" BEL
-        "stack_FF_1" BEL "stack_FF_2" BEL "stack_FF_3" BEL "stack_FF_4" BEL
-        "stack_FF_5" BEL "stack_FF_6" BEL "stack_FF_7" BEL "stack_FF_32" BEL
-        "stack_FF_33" BEL "stack_FF_34" BEL "stack_FF_35" BEL "stack_FF_36"
-        BEL "stack_FF_37" BEL "stack_FF_38" BEL "stack_FF_39" BEL
-        "stack_FF_64" BEL "stack_FF_65" BEL "stack_FF_66" BEL "stack_FF_67"
-        BEL "stack_FF_68" BEL "stack_FF_69" BEL "stack_FF_70" BEL
-        "stack_FF_71" BEL "stack_FF_96" BEL "stack_FF_97" BEL "stack_FF_98"
-        BEL "stack_FF_99" BEL "stack_FF_100" BEL "stack_FF_101" BEL
-        "stack_FF_102" BEL "stack_FF_103" BEL "stack_FF_128" BEL
-        "stack_FF_129" BEL "stack_FF_130" BEL "stack_FF_131" BEL
-        "stack_FF_132" BEL "stack_FF_133" BEL "stack_FF_134" BEL
-        "stack_FF_135" BEL "stack_FF_160" BEL "stack_FF_161" BEL
-        "stack_FF_162" BEL "stack_FF_163" BEL "stack_FF_164" BEL
-        "stack_FF_165" BEL "stack_FF_166" BEL "stack_FF_167" BEL
-        "stack_FF_192" BEL "stack_FF_193" BEL "stack_FF_194" BEL
-        "stack_FF_195" BEL "stack_FF_196" BEL "stack_FF_197" BEL
-        "stack_FF_198" BEL "stack_FF_199" BEL "stack_FF_224" BEL
-        "stack_FF_225" BEL "stack_FF_226" BEL "stack_FF_227" BEL
-        "stack_FF_228" BEL "stack_FF_229" BEL "stack_FF_230" BEL
-        "stack_FF_231" BEL "Delay_Reset1/Count_0" BEL "Delay_Reset1/Count_1"
-        BEL "Delay_Reset1/Count_2" BEL "Delay_Reset1/Count_3" BEL
+TIMEGRP VGA_PLL1_clkout0 = BEL "prev_key_pressed" BEL "First_Char_0" BEL
+        "First_Char_1" BEL "First_Char_2" BEL "First_Char_3" BEL
+        "Second_Char_0" BEL "Second_Char_1" BEL "Second_Char_2" BEL
+        "Second_Char_3" BEL "top_0" BEL "top_1" BEL "top_2" BEL "stack_0_0"
+        BEL "stack_0_1" BEL "stack_0_2" BEL "stack_0_3" BEL "stack_0_4" BEL
+        "stack_0_5" BEL "stack_0_6" BEL "stack_0_7" BEL "stack_0_8" BEL
+        "stack_0_9" BEL "stack_0_10" BEL "stack_0_11" BEL "stack_0_12" BEL
+        "stack_0_13" BEL "stack_0_14" BEL "stack_0_15" BEL "stack_0_16" BEL
+        "stack_0_17" BEL "stack_0_18" BEL "stack_0_19" BEL "stack_0_20" BEL
+        "stack_0_21" BEL "stack_0_22" BEL "stack_0_23" BEL "stack_0_24" BEL
+        "stack_0_25" BEL "stack_0_26" BEL "stack_0_27" BEL "stack_0_28" BEL
+        "stack_0_29" BEL "stack_0_30" BEL "stack_0_31" BEL "stack_0_32" BEL
+        "stack_0_33" BEL "stack_0_34" BEL "stack_0_35" BEL "stack_0_36" BEL
+        "stack_0_37" BEL "stack_0_38" BEL "stack_0_39" BEL "stack_0_40" BEL
+        "stack_0_41" BEL "stack_0_42" BEL "stack_0_43" BEL "stack_0_44" BEL
+        "stack_0_45" BEL "stack_0_46" BEL "stack_0_47" BEL "stack_0_48" BEL
+        "stack_0_49" BEL "stack_0_50" BEL "stack_0_51" BEL "stack_0_52" BEL
+        "stack_0_53" BEL "stack_0_54" BEL "stack_0_55" BEL "stack_0_56" BEL
+        "stack_0_57" BEL "stack_0_58" BEL "stack_0_59" BEL "stack_0_60" BEL
+        "stack_0_61" BEL "stack_0_62" BEL "stack_0_63" BEL "stack_0_64" BEL
+        "stack_0_65" BEL "stack_0_66" BEL "stack_0_67" BEL "stack_0_68" BEL
+        "stack_0_69" BEL "stack_0_70" BEL "stack_0_71" BEL "stack_0_72" BEL
+        "stack_0_73" BEL "stack_0_74" BEL "stack_0_75" BEL "stack_0_76" BEL
+        "stack_0_77" BEL "stack_0_78" BEL "stack_0_79" BEL "stack_0_80" BEL
+        "stack_0_81" BEL "stack_0_82" BEL "stack_0_83" BEL "stack_0_84" BEL
+        "stack_0_85" BEL "stack_0_86" BEL "stack_0_87" BEL "stack_0_88" BEL
+        "stack_0_89" BEL "stack_0_90" BEL "stack_0_91" BEL "stack_0_92" BEL
+        "stack_0_93" BEL "stack_0_94" BEL "stack_0_95" BEL "stack_0_96" BEL
+        "stack_0_97" BEL "stack_0_98" BEL "stack_0_99" BEL "stack_0_100" BEL
+        "stack_0_101" BEL "stack_0_102" BEL "stack_0_103" BEL "stack_0_104"
+        BEL "stack_0_105" BEL "stack_0_106" BEL "stack_0_107" BEL
+        "stack_0_108" BEL "stack_0_109" BEL "stack_0_110" BEL "stack_0_111"
+        BEL "stack_0_112" BEL "stack_0_113" BEL "stack_0_114" BEL
+        "stack_0_115" BEL "stack_0_116" BEL "stack_0_117" BEL "stack_0_118"
+        BEL "stack_0_119" BEL "stack_0_120" BEL "stack_0_121" BEL
+        "stack_0_122" BEL "stack_0_123" BEL "stack_0_124" BEL "stack_0_125"
+        BEL "stack_0_126" BEL "stack_0_127" BEL "stack_0_128" BEL
+        "stack_0_129" BEL "stack_0_130" BEL "stack_0_131" BEL "stack_0_132"
+        BEL "stack_0_133" BEL "stack_0_134" BEL "stack_0_135" BEL
+        "stack_0_136" BEL "stack_0_137" BEL "stack_0_138" BEL "stack_0_139"
+        BEL "stack_0_140" BEL "stack_0_141" BEL "stack_0_142" BEL
+        "stack_0_143" BEL "stack_0_144" BEL "stack_0_145" BEL "stack_0_146"
+        BEL "stack_0_147" BEL "stack_0_148" BEL "stack_0_149" BEL
+        "stack_0_150" BEL "stack_0_151" BEL "stack_0_152" BEL "stack_0_153"
+        BEL "stack_0_154" BEL "stack_0_155" BEL "stack_0_156" BEL
+        "stack_0_157" BEL "stack_0_158" BEL "stack_0_159" BEL "stack_0_160"
+        BEL "stack_0_161" BEL "stack_0_162" BEL "stack_0_163" BEL
+        "stack_0_164" BEL "stack_0_165" BEL "stack_0_166" BEL "stack_0_167"
+        BEL "stack_0_168" BEL "stack_0_169" BEL "stack_0_170" BEL
+        "stack_0_171" BEL "stack_0_172" BEL "stack_0_173" BEL "stack_0_174"
+        BEL "stack_0_175" BEL "stack_0_176" BEL "stack_0_177" BEL
+        "stack_0_178" BEL "stack_0_179" BEL "stack_0_180" BEL "stack_0_181"
+        BEL "stack_0_182" BEL "stack_0_183" BEL "stack_0_184" BEL
+        "stack_0_185" BEL "stack_0_186" BEL "stack_0_187" BEL "stack_0_188"
+        BEL "stack_0_189" BEL "stack_0_190" BEL "stack_0_191" BEL
+        "stack_0_192" BEL "stack_0_193" BEL "stack_0_194" BEL "stack_0_195"
+        BEL "stack_0_196" BEL "stack_0_197" BEL "stack_0_198" BEL
+        "stack_0_199" BEL "stack_0_200" BEL "stack_0_201" BEL "stack_0_202"
+        BEL "stack_0_203" BEL "stack_0_204" BEL "stack_0_205" BEL
+        "stack_0_206" BEL "stack_0_207" BEL "stack_0_208" BEL "stack_0_209"
+        BEL "stack_0_210" BEL "stack_0_211" BEL "stack_0_212" BEL
+        "stack_0_213" BEL "stack_0_214" BEL "stack_0_215" BEL "stack_0_216"
+        BEL "stack_0_217" BEL "stack_0_218" BEL "stack_0_219" BEL
+        "stack_0_220" BEL "stack_0_221" BEL "stack_0_222" BEL "stack_0_223"
+        BEL "stack_0_224" BEL "stack_0_225" BEL "stack_0_226" BEL
+        "stack_0_227" BEL "stack_0_228" BEL "stack_0_229" BEL "stack_0_230"
+        BEL "stack_0_231" BEL "stack_0_232" BEL "stack_0_233" BEL
+        "stack_0_234" BEL "stack_0_235" BEL "stack_0_236" BEL "stack_0_237"
+        BEL "stack_0_238" BEL "stack_0_239" BEL "stack_0_240" BEL
+        "stack_0_241" BEL "stack_0_242" BEL "stack_0_243" BEL "stack_0_244"
+        BEL "stack_0_245" BEL "stack_0_246" BEL "stack_0_247" BEL
+        "stack_0_248" BEL "stack_0_249" BEL "stack_0_250" BEL "stack_0_251"
+        BEL "stack_0_252" BEL "stack_0_253" BEL "stack_0_254" BEL
+        "stack_0_255" BEL "Third_Char" BEL "Fourth_Char" BEL "glyph_0" BEL
+        "glyph_1" BEL "glyph_2" BEL "glyph_3" BEL "glyph_4" BEL "glyph_6" BEL
+        "Delay_Reset1/Reset" BEL "line_0" BEL "line_1" BEL "line_2" BEL
+        "Delay_Reset1/Count_0" BEL "Delay_Reset1/Count_1" BEL
+        "Delay_Reset1/Count_2" BEL "Delay_Reset1/Count_3" BEL
         "Delay_Reset1/Count_4" BEL "Delay_Reset1/Count_5" BEL
         "Delay_Reset1/Count_6" BEL "Delay_Reset1/Count_7" BEL
         "Delay_Reset1/Count_8" BEL "Delay_Reset1/Count_9" BEL
@@ -170,31 +220,31 @@ TIMEGRP VGA_PLL1_clkout0 = BEL "Second_Char_0" BEL "Second_Char_1" BEL
         "Delay_Reset1/Count_16" BEL "Delay_Reset1/Count_17" BEL
         "Delay_Reset1/Count_18" BEL "Delay_Reset1/Count_19" BEL
         "Delay_Reset1/Count_20" BEL "Delay_Reset1/Count_21" BEL
-        "Delay_Reset1/Count_22" BEL "VGA_PLL1/clkout1_buf" BEL
-        "SS_Driver1/Count_16" BEL "SS_Driver1/Count_15" BEL
-        "SS_Driver1/Count_14" BEL "SS_Driver1/Count_13" BEL
-        "SS_Driver1/Count_12" BEL "SS_Driver1/Count_11" BEL
-        "SS_Driver1/Count_10" BEL "SS_Driver1/Count_9" BEL
-        "SS_Driver1/Count_8" BEL "SS_Driver1/Count_7" BEL "SS_Driver1/Count_6"
-        BEL "SS_Driver1/Count_5" BEL "SS_Driver1/Count_4" BEL
-        "SS_Driver1/Count_3" BEL "SS_Driver1/Count_2" BEL "SS_Driver1/Count_1"
-        BEL "SS_Driver1/Count_0" BEL "SS_Driver1/SegmentDrivers_3" BEL
-        "SS_Driver1/SegmentDrivers_2" BEL "SS_Driver1/SegmentDrivers_1" BEL
-        "SS_Driver1/SegmentDrivers_0" BEL "VGA_Text1/VCounter_9" BEL
-        "VGA_Text1/VCounter_8" BEL "VGA_Text1/VCounter_7" BEL
+        "Delay_Reset1/Count_22" BEL "character_0" BEL "character_1" BEL
+        "character_2" BEL "VGA_PLL1/clkout1_buf" BEL "SS_Driver1/Count_16" BEL
+        "SS_Driver1/Count_15" BEL "SS_Driver1/Count_14" BEL
+        "SS_Driver1/Count_13" BEL "SS_Driver1/Count_12" BEL
+        "SS_Driver1/Count_11" BEL "SS_Driver1/Count_10" BEL
+        "SS_Driver1/Count_9" BEL "SS_Driver1/Count_8" BEL "SS_Driver1/Count_7"
+        BEL "SS_Driver1/Count_6" BEL "SS_Driver1/Count_5" BEL
+        "SS_Driver1/Count_4" BEL "SS_Driver1/Count_3" BEL "SS_Driver1/Count_2"
+        BEL "SS_Driver1/Count_1" BEL "SS_Driver1/Count_0" BEL
+        "SS_Driver1/SegmentDrivers_3" BEL "SS_Driver1/SegmentDrivers_2" BEL
+        "SS_Driver1/SegmentDrivers_1" BEL "SS_Driver1/SegmentDrivers_0" BEL
+        "VGA_Text1/VCounter_8" BEL "VGA_Text1/HCounter_9" BEL
+        "VGA_Text1/VCounter_7" BEL "VGA_Text1/VCounter_9" BEL
         "VGA_Text1/VCounter_6" BEL "VGA_Text1/VCounter_5" BEL
         "VGA_Text1/VCounter_4" BEL "VGA_Text1/VCounter_3" BEL
         "VGA_Text1/VCounter_2" BEL "VGA_Text1/VCounter_1" BEL
-        "VGA_Text1/VCounter_0" BEL "VGA_Text1/HCounter_9" BEL
-        "VGA_Text1/HCounter_8" BEL "VGA_Text1/HCounter_7" BEL
-        "VGA_Text1/HCounter_6" BEL "VGA_Text1/HCounter_5" BEL
-        "VGA_Text1/HCounter_4" BEL "VGA_Text1/HCounter_3" BEL
-        "VGA_Text1/HCounter_2" BEL "VGA_Text1/HCounter_1" BEL
-        "VGA_Text1/HCounter_0" BEL "VGA_Text1/Blue_3" BEL "VGA_Text1/Blue_2"
-        BEL "VGA_Text1/Blue_1" BEL "VGA_Text1/Blue_0" BEL "VGA_Text1/Green_3"
-        BEL "VGA_Text1/Green_2" BEL "VGA_Text1/Green_1" BEL
-        "VGA_Text1/Green_0" BEL "VGA_Text1/Red_3" BEL "VGA_Text1/Red_2" BEL
-        "VGA_Text1/Red_1" BEL "VGA_Text1/Red_0" BEL
+        "VGA_Text1/VCounter_0" BEL "VGA_Text1/HCounter_8" BEL
+        "VGA_Text1/HCounter_7" BEL "VGA_Text1/HCounter_6" BEL
+        "VGA_Text1/HCounter_5" BEL "VGA_Text1/HCounter_4" BEL
+        "VGA_Text1/HCounter_3" BEL "VGA_Text1/HCounter_2" BEL
+        "VGA_Text1/HCounter_1" BEL "VGA_Text1/HCounter_0" BEL
+        "VGA_Text1/Green_3" BEL "VGA_Text1/Green_2" BEL "VGA_Text1/Green_1"
+        BEL "VGA_Text1/Green_0" BEL "VGA_Text1/Red_3" BEL "VGA_Text1/Red_2"
+        BEL "VGA_Text1/Red_1" BEL "VGA_Text1/Red_0" BEL "VGA_Text1/Blue_3" BEL
+        "VGA_Text1/Blue_2" BEL "VGA_Text1/Blue_1" BEL "VGA_Text1/Blue_0" BEL
         "VGA_Text1/tText_Foreground_11" BEL "VGA_Text1/tText_Foreground_10"
         BEL "VGA_Text1/tText_Foreground_9" BEL "VGA_Text1/tText_Foreground_8"
         BEL "VGA_Text1/tText_Foreground_7" BEL "VGA_Text1/tText_Foreground_6"
@@ -208,9 +258,8 @@ TIMEGRP VGA_PLL1_clkout0 = BEL "Second_Char_0" BEL "Second_Char_1" BEL
         "VGA_Text1/tText_Background_4" BEL "VGA_Text1/tText_Background_3" BEL
         "VGA_Text1/tText_Background_2" BEL "VGA_Text1/tText_Background_1" BEL
         "VGA_Text1/tText_Background_0" BEL "VGA_Text1/tReset" BEL
-        "VGA_Text1/HSync" BEL "Delay_Reset1/Reset" BEL "VGA_Text1/VSync" BEL
-        "character_0" BEL "character_1" BEL "character_2" BEL "character_3"
-        BEL "character_4" BEL "character_5" BEL "character_6" PIN
+        "VGA_Text1/VSync" BEL "VGA_Text1/HSync" BEL "top_2_1" BEL "top_1_1"
+        BEL "top_0_1" PIN
         "VGA_Text1/Font/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>"
         PIN
         "VGA_Text1/Font/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>"

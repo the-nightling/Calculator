@@ -7,7 +7,8 @@ module Process_Keyboard(
 
 reg [3:0] count;		// used to determine current negative edge
 reg [10:0] data;		// stores hex of key pressed
-reg [7:0] prev_data;	// stores hex of previous key pressed
+reg [7:0] prev_data;// = 8'hf0;	// stores hex of previous key pressed
+//reg [7:0] prev_prev_data = 8'hf0;
 
 always @(negedge Key_Clk) begin	// only read on negative edge
 	data[count] = Data_in;			// read a bit
@@ -21,10 +22,11 @@ always @(negedge Key_Clk) begin	// only read on negative edge
 		else ext = 1'b0;
 		
 		// check for key release
-		if(Data_out == 8'hf0 || prev_data == 8'hf0) key_pressed = 1'b0;
+		if(prev_data == 8'hf0 || Data_out == 8'hf0) key_pressed = 1'b0;
 		else key_pressed = 1'b1;
 		
 		// store previous key press to check for key release
+		//prev_prev_data = prev_data;
 		prev_data = Data_out;
 		
 	// reset count when all negative edges for a character have been read

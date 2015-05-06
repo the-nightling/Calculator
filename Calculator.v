@@ -27,11 +27,14 @@ wire key_pressed;			// check keyboard press
 reg prev_key_pressed;	// check previous state of keyboard press (for edge triggering)
 wire ext;					// check extended key press
 reg [6:0]character;		// determines character position on VGA
-reg [4:0]line;				// determines line position on VGA
+reg [2:0]line;				// determines line position on VGA
+reg [2:0] stack_line;
 reg [7:0]glyph;			// determines character displayed on VGA
 reg[31:0]stack[7:0];		// stack (32bits wide, 8addresses high)
 reg[2:0]top; 				// stack pointer
 reg display_results;		// flag used to indicate when to display arithmetic results from stack
+reg[3:0] digit;
+reg[1:0] count;
 
 Delay_Reset Delay_Reset1(CLK_25M, ~Reset_Button, Reset);
 Process_Keyboard Process_Keyboard1(Key_Clk, Key_Data, ext, Output_Data, key_pressed);
@@ -43,11 +46,11 @@ VGA_Text VGA_Text1(
  CLK_25M,      // The interface clock
  CLK_25M, 		// The pixel clock (25.152 MHz for 640 x 480 x 60 Hz)
 
- line,			//input [ 4:0]Line,
+ {2'd0, line},			//input [ 4:0]Line,
  character,		//input [ 6:0]Character,
  glyph,	//input [ 7:0]Glyph,      // Glyph index
- 12'h0000F0,	//input [11:0]Foreground, // RGB, 4-bit each
- 12'h000000,	//input [11:0]Background, // RGB, 4-bit each
+ 12'h0FF,	//input [11:0]Foreground, // RGB, 4-bit each
+ 12'h000,	//input [11:0]Background, // RGB, 4-bit each
  1'b1,			//input  Latch,
 
  Red,
@@ -59,106 +62,125 @@ VGA_Text VGA_Text1(
 
 
 always @(posedge CLK_25M) begin
+if(~LOCKED) begin
+ stack[0] <= 32'h12345678;
+ stack[1] <= 32'hABCDEF90;
+ stack[2] <= 0;
+ stack[3] <= 0;
+ stack[4] <= 0;
+ stack[5] <= 0;
+ stack[6] <= 0;
+ stack[7] <= 0;
+
+end else begin
 	// output keyboard hex onto SS displays
-	First_Char = Output_Data[3:0];
-	Second_Char = Output_Data[7:4];
-	Third_Char = {3'b0,ext};				// indicates whether extended key was pressed
-	Fourth_Char = {3'b0,key_pressed};	// indicates whether a key is being pressed
+	First_Char  <= Output_Data[3:0];
+	Second_Char <= Output_Data[7:4];
+	Third_Char  <= {3'b0,ext};				// indicates whether extended key was pressed
+	Fourth_Char <= {3'b0,key_pressed};	// indicates whether a key is being pressed
 	
 	// on positive edge of a key press,
+	/*
+	stack[0] = {4'h1,4'h1,4'h1,4'h1,4'h1,4'h1,4'h1,4'h1};
+	stack[1] = {4'h2,4'h2,4'h2,4'h2,4'h2,4'h2,4'h2,4'h2};
+	stack[2] = {4'h3,4'h3,4'h3,4'h3,4'h3,4'h3,4'h3,4'h3};
+	stack[3] = {4'h4,4'h4,4'h4,4'h4,4'h4,4'h4,4'h4,4'h4};
+	stack[4] = {4'h5,4'h5,4'h5,4'h5,4'h5,4'h5,4'h5,4'h5};
+	stack[5] = {4'h6,4'h6,4'h6,4'h6,4'h6,4'h6,4'h6,4'h6};
+	stack[6] = {4'h7,4'h7,4'h7,4'h7,4'h7,4'h7,4'h7,4'h7};
+	stack[7] = {4'h8,4'h8,4'h8,4'h8,4'h8,4'h8,4'h8,4'h8};
+	//*/
+	//*
+
 	if({prev_key_pressed, key_pressed} == 2'b01) begin
-	
-		if(Output_Data == 8'h16) begin	// number 1 pressed
-			glyph = 8'h30+8'd1;
-			stack[top] = {stack[top][23:0],glyph-8'h30};
-			character = character+1;
-		end else if(Output_Data == 8'h1e) begin	// number 2 pressed
-			glyph = 8'h30+8'd2;
-			stack[top] = {stack[top][23:0],glyph-8'h30};
-			character = character+1;
-		end else if(Output_Data == 8'h26) begin	// number 3 pressed
-			glyph = 8'h30+8'd3;
-			stack[top] = {stack[top][23:0],glyph-8'h30};
-			character = character+1;
-		end else if(Output_Data == 8'h25) begin	// number 4 pressed
-			glyph = 8'h30+8'd4;
-			stack[top] = {stack[top][23:0],glyph-8'h30};
-			character = character+1;
-		end else if(Output_Data == 8'h2e) begin	// number 5 pressed
-			glyph = 8'h30+8'd5;
-			stack[top] = {stack[top][23:0],glyph-8'h30};
-			character = character+1;
-		end else if(Output_Data == 8'h36) begin	// number 6 pressed
-			glyph = 8'h30+8'd6;
-			stack[top] = {stack[top][23:0],glyph-8'h30};
-			character = character+1;
-		end else if(Output_Data == 8'h3d) begin	// number 7 pressed
-			glyph = 8'h30+8'd7;
-			stack[top] = {stack[top][23:0],glyph-8'h30};
-			character = character+1;
-		end else if(Output_Data == 8'h3e) begin	// number 8 pressed
-			glyph = 8'h30+8'd8;
-			stack[top] = {stack[top][23:0],glyph-8'h30};
-			character = character+1;
-		end else if(Output_Data == 8'h46) begin	// number 9 pressed
-			glyph = 8'h30+8'd9;
-			stack[top] = {stack[top][23:0],glyph-8'h30};
-			character = character+1;
-		end else if(Output_Data == 8'h45) begin	// number 0 pressed
-			glyph = 8'h30+8'd0;
-			stack[top] = {stack[top][23:0],glyph-8'h30};
-			character = character+1;
-		end else if(Output_Data == 8'h55) begin	// + pressed
-			line = line+1;
-			character = 0;
-			stack[top-1'b1] = stack[top-1'b1] + stack[top];
-			top = top - 1'b1;
-			//display_results = 1'b1;
-			glyph = 8'h30+stack[top][31:24];
-			character = character+1;
-			glyph = 8'h30+stack[top][23:16];
-			character = character+1;
-			glyph = 8'h30+stack[top][15:8];
-			character = character+1;
-			glyph = 8'h30+stack[top][7:0];
-		end
-		else if(ext == 1'b0 && Output_Data == 8'h66) character = character-1;	// backspace pressed
-		else if(ext == 1'b0 && Output_Data == 8'h5a)begin		// enter pressed
-			glyph = 8'd0;
-			line = line+1'b1;
-			character = 0;
-			top = top + 1'b1;
-		end
-		else glyph = 8'h30+8'd47;		// other key pressed (set to underscore)
-		
-		// if end of line reached, move to next line
-		if(character == 7'b0111111) begin
-			line = line+1;
-			character = 0;
-		end
-		
-		/*
-		if(display_results == 1'b1) begin
-			if(character == 7'd0) begin
-				glyph = stack[top][31:24];
-				character = character+1;
-			end else if(character == 7'd1) begin
-				glyph = stack[top][23:16];
-				character = character+1;
-			end else if(character == 7'd2) begin
-				glyph = stack[top][15:8];
-				character = character+1;
-			end else if(character == 7'd3) begin
-				glyph = stack[top][7:0];
-				character = 0;
-				line = line + 1'b1;
-				display_results = 1'b0;
-			end
-		end
-		//*/
+		//*
+		case({ext, Output_Data})
+		 9'h016: stack[top] <= {stack[top][27:0],4'h1};
+		 9'h01E: stack[top] <= {stack[top][27:0],4'h2};
+		 9'h026: stack[top] <= {stack[top][27:0],4'h3};
+		 9'h025: stack[top] <= {stack[top][27:0],4'h4};
+		 9'h02E: stack[top] <= {stack[top][27:0],4'h5};
+		 9'h036: stack[top] <= {stack[top][27:0],4'h6};
+		 9'h03D: stack[top] <= {stack[top][27:0],4'h7};
+		 9'h03E: stack[top] <= {stack[top][27:0],4'h8};
+		 9'h046: stack[top] <= {stack[top][27:0],4'h9};
+		 9'h045: stack[top] <= {stack[top][27:0],4'h0};
+		 9'h01C: stack[top] <= {stack[top][27:0],4'hA};
+		 9'h032: stack[top] <= {stack[top][27:0],4'hB};
+		 9'h021: stack[top] <= {stack[top][27:0],4'hC};
+		 9'h023: stack[top] <= {stack[top][27:0],4'hD};
+		 9'h024: stack[top] <= {stack[top][27:0],4'hE};
+		 9'h02B: stack[top] <= {stack[top][27:0],4'hF};
+		 9'h055: begin // +
+			stack[top-1'b1] <= stack[top-1'b1] + stack[top];
+			stack[top] <= 0;
+			top <= top - 1'b1;
+		 end
+		 9'h04E: begin // -
+			stack[top-1'b1] <= stack[top-1'b1] - stack[top];
+			stack[top] <= 0;
+			top <= top - 1'b1;
+		 end
+		 9'h07C: begin // *
+			stack[top-1'b1] <= stack[top-1'b1] * stack[top];
+			stack[top] <= 0;
+			top <= top - 1'b1;
+		 end
+		 9'h05A: begin	// enter
+			top <= top + 1'b1;
+		 end
+		 default:;
+		endcase
 	end
+	//*/
+	
+	if(character == 7'd7) character <= 7'd0;
+	else                  character <= character + 1'b1;
+	
+	if(character == 7'd7) begin
+		if(stack[stack_line+1'b1][31:28] > 32'h9) glyph <= stack[stack_line+1'b1][31:28]+8'h37;
+		else glyph <= 8'h30+stack[stack_line+1'b1][31:28]; 
+		line       <= line      +1'b1;
+		stack_line <= stack_line+1'b1;
+	end else if(character == 7'd0) begin
+		if(stack[stack_line][27:24] > 32'h9) glyph <= stack[stack_line][27:24]+8'h37;
+		else glyph <= 8'h30+stack[stack_line][27:24]; 
+	end else if(character == 7'd1) begin
+		if(stack[stack_line][23:20] > 32'h9) glyph <= stack[stack_line][23:20]+8'h37;
+		else glyph <= 8'h30+stack[stack_line][23:20]; 
+	end else if(character == 7'd2) begin
+		if(stack[stack_line][19:16] > 32'h9) glyph <= stack[stack_line][19:16]+8'h37;
+		else glyph <= 8'h30+stack[stack_line][19:16]; 
+	end else if(character == 7'd3) begin
+		if(stack[stack_line][15:12] > 32'h9) glyph <= stack[stack_line][15:12]+8'h37;
+		else glyph <= 8'h30+stack[stack_line][15:12]; 
+	end else if(character == 7'd4) begin
+		if(stack[stack_line][11:8] > 32'h9) glyph <= stack[stack_line][11:8]+8'h37;
+		else glyph <= 8'h30+stack[stack_line][11:8]; 
+	end else if(character == 7'd5) begin
+		if(stack[stack_line][7:4] > 32'h9) glyph <= stack[stack_line][7:4]+8'h37;
+		else glyph <= 8'h30+stack[stack_line][7:4]; 
+	end else if(character == 7'd6) begin
+		if(stack[stack_line][3:0] > 32'h9) glyph <= stack[stack_line][3:0]+8'h37;
+		else glyph <= 8'h30+stack[stack_line][3:0]; 
+	end
+	
+	
+
+//	if(character == 7'd8) begin
+//		line = line+1'b1;
+//		stack_line = stack_line+1'b1;
+//		character = 7'b1111111;
+//	end
+	
+//	if(stack_line == 4'd8) begin
+//		stack_line = 0;
+//		line = 0;
+//	end
+	
 	// store previous key pressed state to check for positive edge
-	prev_key_pressed = key_pressed;
+end
+	prev_key_pressed <= key_pressed;
 	
 end
 
